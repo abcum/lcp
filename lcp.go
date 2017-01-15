@@ -16,6 +16,11 @@ package lcp
 
 import "bytes"
 
+// LCP returns the longest common prefix between multiple slices of bytes.
+// If no items are passed in to the method, then a nil byte slice is
+// returned. If two or more byte slices are passed in to the method, then
+// the longest common lexicographical prefix shared by all of the slices
+// will be returned.
 func LCP(items ...[]byte) []byte {
 
 	switch len(items) {
